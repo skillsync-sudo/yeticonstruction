@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services in Nepal | Design, Build & Renovation</title>
+  <meta name="description" content="Explore construction services in Nepal including design, planning, building, and renovation in Kathmandu by expert engineers.">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --color-primary: #f59e0b;
+            --color-dark: #0f172a;
+            --color-darker: #020617;
+            --color-white: #ffffff;
+            --color-grey: #64748b;
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-smooth: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            color: var(--color-dark);
+            line-height: 1.6;
+            background: var(--color-white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1920') center/cover;
+            color: var(--color-white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Grid Layout */
+        .services-detail-section {
+            padding: 5rem 0;
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--color-primary);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--color-darker);
+        }
+
+        .service-content p {
+            color: var(--color-grey);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        footer {
+            background: var(--color-darker);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 992px) {
+
+            .service-row,
+            .service-row:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .service-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Sano-Bharyang-2, Kathmandu, Nepal</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:yetihomeconstruction@gmail.com"
+                        class="contact-link">yetihomeconstruction@gmail.com</a></span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/17F7tK5gfr/?mibextid=wwXIfr" target="_blank" rel="noreferrer"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/yetihomeconstruction?igsh=YmxhOWZwczZ0ZnF1&utm_source=qr" target="_blank" rel="noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@yetihome.construction?_r=1&_t=ZS-95aaYKi8AtM" target="_blank" rel="noreferrer"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+        <div class="container flex-between">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Yeti Home Construction Logo" class="logo-img">
+                <span>Yeti Home <strong>Construction</strong></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="btn-primary" id="request-quote-btn"
+                onclick="window.open('https://wa.me/9779764478818?text=Hi%20Yeti%20Home%20Construction%2C%20I%20would%20like%20to%20request%20a%20consultation.', '_blank')">Request
+                Quote</button>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container">
+            <h1>Construction Services in Nepal – Design, Build & Renovation </h1>
+            <p>Professional engineering and construction solutions tailored for excellence.</p>
+        </div>
+    </header>
+
+    <section class="services-detail-section container">
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="images/arc.jpeg"
+                    alt="Architectural Design">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-pencil-ruler"></i></div>
+                <h2>Architectural Design</h2>
+                <p>
+                    We provide modern architectural design services in Nepal, creating functional, aesthetic, and
+                    earthquake-resistant structures. Our designs are tailored to your lifestyle, ensuring efficient
+                    space utilization and long-term durability.
+                </p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Start Designing</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="images/sitevise.jpeg"
+                    alt="Project Planning">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-calendar-check"></i></div>
+                <h2>Strategic Planning</h2>
+                <p>
+                    Our construction planning services include site analysis, cost estimation, and project scheduling.
+                    We ensure your construction project in Kathmandu is completed efficiently, on time, and within
+                    budget.
+                </p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Plan Your Project</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="images/commercial.jpeg" alt="Construction Work">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-hard-hat"></i></div>
+                <h2>Full-Scale Construction</h2>
+                <p>
+                    We offer complete building construction services in Nepal, from foundation work to final finishing.
+                    Our team uses high-quality materials and advanced techniques to deliver strong and reliable
+                    structures.
+                </p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Build With Us</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="images/supervise.jpeg" alt="Site Supervision">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-eye"></i></div>
+                <h2>Site Supervision</h2>
+                <p>
+                    Our expert engineers provide on-site supervision to ensure every construction project meets design
+                    specifications, safety standards, and quality expectations.
+                </p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="images/expercontsultant.jpeg" alt="Expert Consultation">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-comments"></i></div>
+                <h2>Expert Consultation</h2>
+                <p>
+                    Get professional construction consultation in Nepal for land use, structural design, budgeting, and
+                    project feasibility. We help you make informed decisions before starting your project.
+                </p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Get Expert Advice</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&q=80&w=800"
+                    alt="Home Renovation">
+            </div>
+            <div class="service-content">
+                <div class="service-icon-box"><i class="fas fa-tools"></i></div>
+                <h2>Modern Renovation</h2>
+                <p>Breathe new life into existing structures. We specialize in structural retrofitting, interior
+                    remodeling, and modernizing older homes to meet contemporary safety and aesthetic standards.</p>
+                <a href="https://wa.me/9779764478818" class="btn-primary">Start Renovation</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact" class="footer section-dark">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/logo.png" alt="Yeti Home Construction Pvt. Ltd. Logo" class="logo-img">
+                    <span class="footer-text">Yeti Home <strong>Construction</strong></span>
+                </a>
+                <p>
+                    Yeti Home Construction Pvt. Ltd. is a trusted construction company in Nepal offering architectural
+                    design, building construction, renovation, and engineering services in Kathmandu since 2016.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="project.html">Our Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Sano-Bharyang-2, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+9779764478818" class="contact-link">+9779764478818</a>
+                </p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:yetihomeconstruction@gmail.com"
+                        class="contact-link">yetihomeconstruction@gmail.com</a></p>
+                <div class="social-icons" style="display:flex; gap:16px; margin-top:0;">
+                    <a href="https://www.facebook.com/share/17F7tK5gfr/?mibextid=wwXIfr" target="_blank" rel="noreferrer"
+                        style="color:#fff; font-size:1.2rem; transition:color .3s;"
+                        onmouseover="this.style.color='#00d2ff'" onmouseout="this.style.color='#fff'">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yetihomeconstruction?igsh=YmxhOWZwczZ0ZnF1&utm_source=qr" target="_blank" rel="noreferrer"
+                        style="color:#fff; font-size:1.2rem; transition:color .3s;"
+                        onmouseover="this.style.color='#ff6f91'" onmouseout="this.style.color='#fff'">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@yetihome.construction?_r=1&_t=ZS-95aaYKi8AtM" target="_blank" rel="noreferrer"
+                        style="color:#fff; font-size:1.2rem; transition:color .3s;"
+                        onmouseover="this.style.color='#69c9d0'" onmouseout="this.style.color='#fff'">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>
+                &copy; 2026 Yeti Home Construction Pvt. Ltd. All rights reserved.
+                Construction company in Nepal providing design, planning, and building services since 2016.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate service rows on scroll
+        gsap.utils.toArray('.service-row').forEach((row, index) => {
+            gsap.from(row, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: row,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+
+        // Animate hero section
+        gsap.from('.page-hero h1', {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: 'power2.out'
+        });
+        gsap.from('.page-hero p', {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: 'power2.out'
+        });
+    </script>
+
+</body>
+
+</html>
